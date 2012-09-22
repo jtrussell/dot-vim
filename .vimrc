@@ -1,17 +1,11 @@
-" NOTE: This is included using a "source" command in my actual vimrc.
-" 		Also, the colorscheme is similarly sourced and thus does not
-" 		need to be explicitly set.
+" ============================================
+" This should be commented fairly well... Note that pathogen lives in bundle/
+" rather than autoload/ just make sure the runtime directive is in place before
+" calling pathogen:infect(). I work on a bunch of different systems, one of
+" which being windows... so if you get strange errors about line endings...
+" yeah.
+" ============================================
 "
-" NOTE: It if you check this out to a *nix system it maybe be necessary to
-" 		change the fileencoding for this file:
-" 		:set fileencoding=mac
-" 		Then replace all the line endings:
-" 		:%s/\r/\r/g
-"
-" 		on windows..
-"			set fileencoding=dos
-"			:%s/\r//g
-
 " Necessary for lots of cool vim things
 set nocompatible
 
@@ -25,7 +19,6 @@ set ofu=syntaxcomlete#Complete
 " ============================================
 " Pathogen - Include this if you have pathogen
 " ============================================
-"silent! call pathogen#runtime_append_all_bundles()
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
