@@ -25,3 +25,6 @@
 [submodule "extra/doctorjs"]
 	path = extra/doctorjs
 	url = https://github.com/mozilla/doctorjs.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

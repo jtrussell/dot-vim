@@ -49,7 +49,7 @@ set fileformat=unix
 " Turn Syntax highlighting on
 syntax on
 
-colorscheme tmnt
+colorscheme desert
 
 " Custom mapleader option
 let mapleader=","
@@ -179,8 +179,13 @@ imap <C-@> <C-Space>
 " Completion options
 set completeopt=longest,menuone,preview
 
-" Associate .deck extention with the "dec" filetype
-au BufRead,BufNewFile *.dec set syntax=dec
+" =============================================
+" Extra extension associations
+" =============================================
+
+" Deck List Object Notation
+au BufRead,BufNewFile *.dlon set syntax=javascript
+au BufRead,BufNewFile *.dlon set filetype=dlon
 
 " Associate active 4d file extensions with the "a4d" filetype
 au BufRead,BufNewFile *.a4l set syntax=a4l
