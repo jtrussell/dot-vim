@@ -124,10 +124,6 @@ map ; :
 " <CR> clears the search highlighting
 nnoremap <CR> :noh<CR><Esc>
 
-" Map Ctrl-s to save the current buffer
-nnoremap <C-s> :w<CR>
-imap <C-s> <c-o>:w<CR>
-
 " Show current file path
 nnoremap ,F :echo expand("%:p")<CR>
 
