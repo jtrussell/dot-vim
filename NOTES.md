@@ -31,12 +31,6 @@
 
 	<Ctrl>r *pause* "
 
-Window commands typically start with `<C-w>` (see `:help Ctrl-W`)
-i.e. `<C-w><Shift-t>` moves current window to own tab
-
-The command `:highligh` displays all how all syntax groups are affected by the
-current color scheme
-
 ## Get rid of those pesky `^M` s...
 
 	:%s/<Ctrl-v><enter>$//g
@@ -60,3 +54,12 @@ Play back 9 times: `9@q`
 
 	:lcd %:p:h
 
+## Window commands
+
+typically start with `<C-w>` (see `:help Ctrl-W`) i.e. `<C-w><Shift-t>` moves
+current window to own tab
+
+## Syntax Highlighting
+
+The command `:highligh` displays all how all syntax groups are affected by the
+current color scheme
