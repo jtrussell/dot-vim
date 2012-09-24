@@ -5,34 +5,41 @@
 
 ## Vim has a sweet "Clever Tricks" section in the manual!
 
-:h user_12.txt
+	:h user_12.txt
 
 ## Show/Hide Hidden Characters
-:set list!  or  :set invlist
+
+	:set list!  or  :set invlist
 
 ## Uppercase/Lowercase text
-:h gu
+
+	:h gu
 
 ## Diff two open buffers by using the following command in each
-:diffthis
+
+	:diffthis
 
 ## Quickly jump to a given golumn (i.e. 80th)
-80| 
+
+	80| 
 
 ## Reformat text around max column length
-visual selection -> gq
+
+	visual selection -> gq
 
 ## To paste yanked text into a command
-<Ctrl>r *pause* "
+
+	<Ctrl>r *pause* "
 
 Window commands typically start with <C-w> :help Ctrl-W
 i.e. <C-w><Shift-t> moves current window to own tab
 
-The command :highligh displays all how all syntax groups are affected by the
+The command `:highligh` displays all how all syntax groups are affected by the
 current color scheme
 
 ## Get rid of those pesky ^M s...
-:%s/<Ctrl-v><enter>$//g
+
+	:%s/<Ctrl-v><enter>$//g
 
 Use \zs to start matching after a pattern
 
@@ -44,9 +51,12 @@ To play back: @q
 Play back 9 times: 9@q
 
 ## Changing directories
-Change the current working directory to that of the current file
-:cd %:p:h
 
-## Change the cwd to that of the current file (current window only)
-:lcd %:p:h
+### Change the current working directory to that of the current file
+
+	:cd %:p:h
+
+### Change the cwd to that of the current file (current window only)
+
+	:lcd %:p:h
 
