@@ -1,0 +1,112 @@
+{
+	// -----------------------------------------------------
+	// Don't complain if these are undefined
+	// -----------------------------------------------------
+	"predef": [
+		"console",
+		"alert",
+
+		// Jake stuffs
+		"task", "desc", 
+
+		// Sandbox extjs dev stuffs
+		"Ext",
+		"SB",
+		"XDate"
+	]
+
+	// -----------------------------------------------------
+	// Environments
+	// -----------------------------------------------------
+	, "browser":   true
+	, "node":      true
+	, "devel":     false
+
+	// -----------------------------------------------------
+	// Options
+	// -----------------------------------------------------
+	// Automatic Semicolon Injection
+	, "asi":       false	// Changed to false.
+
+	// I've never needed bitwise operators in js
+	, "bitwise":   false
+
+	// Allow assignments when comparison is expected
+ 	, "boss":      false
+
+	// Force variables to be in either camelCase or UPPER_CASE with underscores
+	, "camelcase": true
+
+	// Require curly braces on all blocks
+	, "curly":     true
+
+	// Allow debugger keyword
+	, "debug":     false
+
+	// Require === over ==
+	, "eqeqeq":    true
+
+	// Suppress warnings for == null
+	, "eqnull":    true
+
+	// Eval is evil
+	, "evil":      true
+
+	// Require "for in" loops peroform a hasOwnProperty check
+	, "forin":     true // Changed.
+
+	// Must wrap immediately invoked functions in parens
+	, "immed":     true
+
+	// Prohibits the use of a variable before it was defined
+	, "latedef":   true
+
+	// Suppress warnings about possibly unsafe line breaks ( i.e. no ; )
+	//, "laxbreak":  true
+
+	// Suppress warning about comma-first coding style
+	, "laxcomma":  true
+
+	// Must capitalize constructor names
+	, "newcap":    true
+
+	// arguments.caller and arguments.callee are deprecated in future versions
+	// of javascript... so lets not use them
+	, "noarg":     true
+
+	// Don't allow empty blocks of code
+	, "noempty":   false
+
+	// Prohibit the use of contructors for side effects
+	, "nonew":     true
+
+	// Only allow one var statement per function
+	, "onevar":    true
+
+	// Disallow unary increment and decrement
+	, "plusplus":  false
+
+	// Prohibit unsafe . in regexp
+	, "regexp":    false
+
+	// http://www.emacswiki.org/emacs/SmartTabs
+	, "smarttabs": true
+
+	// Functions run in ES5 *strict* mode
+	, "strict":    false
+
+	// Allow obj["foo"] when obj.foo could be used
+	, "sub":       true
+
+	// Disallow trailing white space
+	, "trailing":  true
+
+	// Prohibit the use of explicitly undefined variables
+	, "undef":     true
+
+	// Complain about vars that are defined and never used
+	, "unused":    false
+
+	// Subscribe to Crockford's ugly ass white space guide
+	, "white":     false
+}
