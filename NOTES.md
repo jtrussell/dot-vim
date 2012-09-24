@@ -35,6 +35,8 @@
 
 	:%s/<Ctrl-v><enter>$//g
 
+## Vim flavored regular expression
+
 Use `\zs` to start matching after a pattern
 
 ## Macros...
