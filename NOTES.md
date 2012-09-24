@@ -31,24 +31,24 @@
 
 	<Ctrl>r *pause* "
 
-Window commands typically start with <C-w> :help Ctrl-W
-i.e. <C-w><Shift-t> moves current window to own tab
+Window commands typically start with `<C-w>` (see `:help Ctrl-W`)
+i.e. `<C-w><Shift-t>` moves current window to own tab
 
 The command `:highligh` displays all how all syntax groups are affected by the
 current color scheme
 
-## Get rid of those pesky ^M s...
+## Get rid of those pesky `^M` s...
 
 	:%s/<Ctrl-v><enter>$//g
 
-Use \zs to start matching after a pattern
+Use `\zs` to start matching after a pattern
 
 ## Macros...
 
-To start recording q<char> ... e.g qq
-To stop recording: q
-To play back: @q
-Play back 9 times: 9@q
+To start recording `q<char>` ... e.g `qq`
+To stop recording: `q`
+To play back: `@q`
+Play back 9 times: `9@q`
 
 ## Changing directories
 
