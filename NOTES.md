@@ -1,6 +1,6 @@
 ## Filetype specific mappings
 
-au FileType php noremap <C-l> :!php -l %<CR>
+	au FileType php noremap <C-l> :!php -l %<CR>
 
 
 ## Vim has a sweet "Clever Tricks" section in the manual!
