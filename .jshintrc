@@ -12,6 +12,7 @@
 		// Sandbox extjs dev stuffs
 		"Ext",
 		"SB",
+		"DZ",
 		"XDate"
 	]
 

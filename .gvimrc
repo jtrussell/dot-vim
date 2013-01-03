@@ -7,6 +7,9 @@ set guioptions-=m
 " Remove toolbar from gvim
 set guioptions-=T
 
+" Use a nicer font
+set guifont=dejavu\ sans\ mono
+
 " Rather than add the ctags folder to my path (used by tagbar) just let vim know
 " where to find the files it needs
 let g:tagbar_ctags_bin = "C:/Users/Justin/vimfiles/extra/tags/ctags58/ctags.exe"

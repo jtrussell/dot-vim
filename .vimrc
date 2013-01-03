@@ -36,12 +36,9 @@ let g:snips_author = g:current_user_name
 
 " ============================================
 " I don't like leaving backup files scattered
-" everywhere - let's just be good about saving
-" and backing up ok?
+" everywhere - store them in a central location
 " ============================================
-set nobackup
-set nowritebackup
-set noswapfile
+set directory=$VIM_BACKUP_DIR
 
 set noerrorbells
 set fileformat=unix
@@ -49,7 +46,8 @@ set fileformat=unix
 " Turn Syntax highlighting on
 syntax on
 
-colorscheme tmnt
+"colorscheme tmnt
+colorscheme monokai
 
 " Custom mapleader option
 let mapleader=","
@@ -135,6 +133,12 @@ vmap <C-d> "_d
 vmap <C-r> <C-d>P
 
 " =============================================
+" Buffer Navigation
+" =============================================
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
+
+" =============================================
 " Plugin Mappings
 " =============================================
 " Expand sequence for Zen Coding
@@ -160,6 +164,9 @@ nnoremap <C-\> mzO<Esc>0D`z:delm<Space>z<CR>
 " line intact
 " =============================================
 imap <C-CR> <Esc>o
+
+" Let Control+Backspace delete entire words
+imap <C-BS> <Esc>vb"_da
 
 " Some sugar - opening a brace then hitting enter will automatically
 " close the brace on a line below and put the cursor between them
@@ -192,7 +199,7 @@ au BufRead,BufNewFile *.a4p set syntax=a4d
 " Keeping lines short helps improve readability
 " and lets us open files side by side withouth
 " cutting off any text
-"au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " Window Movement
 nnoremap <C-h> <C-w>h
@@ -206,11 +213,10 @@ inoremap <C-h> <Esc><C-w>h
 inoremap <C-k> <Esc><C-w>k
 inoremap <C-j> <Esc><C-w>j
 inoremap <C-l> <Esc><C-w>l
-inoremap <C-t> <Esc><C-w>t
-inoremap <C-T> <Esc><C-w>t<C-w>31\|^<C-w>=
 
 " Changes to .vimrc go into effect immediately
 au! BufWritePost .vimrc source %
 
 " Custom Commands
 command! Trim :%s/\s\+$//g
+command! -nargs=* Grunt :!grunt.cmd <f-args>
