@@ -47,7 +47,8 @@ set fileformat=unix
 syntax on
 
 "colorscheme tmnt
-colorscheme monokai
+"colorscheme monokai
+colorscheme solarized
 
 " Custom mapleader option
 let mapleader=","
@@ -220,3 +221,5 @@ au! BufWritePost .vimrc source %
 " Custom Commands
 command! Trim :%s/\s\+$//g
 command! -nargs=* Grunt :!grunt.cmd <f-args>
+command! -nargs=* Node :!node <f-args>
+command! -nargs=* Npm :!npm <f-args>
