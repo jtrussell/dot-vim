@@ -65,3 +65,16 @@ current window to own tab
 
 The command `:highligh` displays all how all syntax groups are affected by the
 current color scheme
+
+## Removing a git submodule
+
+This isn't really vim specifc related but I find myself adding/removing
+submodules often as I shuffle plugins around.
+
+ 1. Delete the relevant section from the .gitmodules file
+ 2. Delete the relevant section from .git/config
+ 3. Run git rm --cached path_to_submodule (no trailing slash)
+ 4. Commit
+ 5. Delete the now untracked submodule files
+ 6. rm -rf path_to_submodule
+
