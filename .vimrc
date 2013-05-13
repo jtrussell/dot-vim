@@ -7,6 +7,7 @@
 " ============================================
 "
 " Necessary for lots of cool vim things
+
 set nocompatible
 
 filetype plugin indent on " Smart filetype detection
@@ -34,6 +35,8 @@ let g:current_user_email = "jus.russell@gmail.com"
 let g:current_user_name = "Justin Russell"
 let g:snips_author = g:current_user_name
 
+let g:browser = $BROWSER
+
 " ============================================
 " I don't like leaving backup files scattered
 " everywhere - store them in a central location
@@ -48,6 +51,8 @@ syntax on
 
 "colorscheme tmnt
 "colorscheme monokai
+
+set background=light
 colorscheme solarized
 
 " Custom mapleader option
@@ -60,7 +65,9 @@ set shiftwidth=2 " Number of spaces to use for each step of (auto)indent.  Used 
 set tabstop=2 " How many spaces a tab counts for
 set autoindent " New lines take indent of above line
 set smartindent " Smart c-like indents
-"set cindent
+"set cindent " Default to C like indentation
+set smarttab " Backspace deletes whole tabs at start of line
+set expandtab " Always expand tabs to spaces
 
 " =============================================
 " Behavior of tab when opening new files,
@@ -150,6 +157,7 @@ imap <C-e> <C-y>,
 "set foldnestmax=5
 "set nofoldenable
 "set foldlevel=1
+set foldmethod=marker
 
 " =============================================
 " I find myself often going into insert mode only to insert a space char - this
@@ -200,7 +208,7 @@ au BufRead,BufNewFile *.a4p set syntax=a4d
 " Keeping lines short helps improve readability
 " and lets us open files side by side withouth
 " cutting off any text
-au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au! BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " Window Movement
 nnoremap <C-h> <C-w>h
@@ -218,8 +226,15 @@ inoremap <C-l> <Esc><C-w>l
 " Changes to .vimrc go into effect immediately
 au! BufWritePost .vimrc source %
 
+fun! g:MarkdownServer()
+ :!start cmd %:p:h /c gfms -p 1234 
+ :!start cmd /c open "http://localhost:1234/%:p:t"
+endfun
+
 " Custom Commands
 command! Trim :%s/\s\+$//g
 command! -nargs=* Grunt :!grunt.cmd <f-args>
+"command! Markdown :!start cmd %:p:h /c gfms -p 1234
+command! Markdown :call g:MarkdownServer()
 command! -nargs=* Node :!node <f-args>
 command! -nargs=* Npm :!npm <f-args>
