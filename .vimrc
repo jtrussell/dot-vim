@@ -223,6 +223,11 @@ inoremap <C-k> <Esc><C-w>k
 inoremap <C-j> <Esc><C-w>j
 inoremap <C-l> <Esc><C-w>l
 
+" Make Ctrl+c actually work like Esc
+inoremap <C-c> <Esc>
+vnoremap <C-c> <Esc>
+nnoremap <C-c> <Esc>
+
 " Changes to .vimrc go into effect immediately
 au! BufWritePost .vimrc source %
 
