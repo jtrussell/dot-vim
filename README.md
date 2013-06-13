@@ -1,3 +1,3 @@
 # Dot Vim
 
--- todo ;) --
+If you have to ask...
