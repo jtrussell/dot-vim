@@ -1,131 +1,108 @@
 " ============================================
-" This should be commented fairly well... Note that pathogen lives in bundle/
-" rather than autoload/ just make sure the runtime directive is in place before
-" calling pathogen:infect(). I work on a bunch of different systems, one of
-" which being windows... so if you get strange errors about line endings...
-" yeah.
+" Note that pathogen lives in bundle/ rather than autoload/ just make sure the
+" runtime directive is in place before calling pathogen:infect().
 " ============================================
-"
-" Necessary for lots of cool vim things
 
+" From the docs for `compatible`:
+" This option has the effect of making Vim either more Vi-compatible, or make
+" Vim behave in a more useful way.
 set nocompatible
 
-filetype plugin indent on " Smart filetype detection
-
-" ============================================
-" Trying out omni completion
-" ============================================
-set ofu=syntaxcomlete#Complete
-
-" ============================================
-" Pathogen - Include this if you have pathogen
-" ============================================
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
-" ============================================
-" Tagbar
-" ============================================
-nmap <F5> :TagbarToggle<CR>
-
-" ============================================
-" Used by some of my scripts, macros, and methods
-" ============================================
-let g:current_user_email = "jus.russell@gmail.com"
-let g:current_user_name = "Justin Russell"
-let g:snips_author = g:current_user_name
-
-let g:browser = $BROWSER
-
-" ============================================
-" I don't like leaving backup files scattered
-" everywhere - store them in a central location
-" ============================================
-set directory=$VIM_BACKUP_DIR
-
-set noerrorbells
-set fileformat=unix
+" Smart filetype detection
+filetype plugin indent on
 
 " Turn Syntax highlighting on
 syntax on
 
-"colorscheme tmnt
-"colorscheme monokai
+" Enable Omni completion
+set ofu=syntaxcomlete#Complete
 
-set background=light
-colorscheme solarized
+" Plugin loading with Pathogen - Include this if you have pathogen. I prefet to
+" keep pathogen itself in the bundle folder which requires it be added to our
+" runtimepath
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+" Used by some of my scripts, macros, and methods
+let g:user_email = "jus.russell@gmail.com"
+let g:user_name = "Justin Russell"
+let g:snips_author = g:user_name
+
+" Sometimes we want to launch a browser
+let g:browser = $BROWSER
 
 " Custom mapleader option
 let mapleader=","
 
-" =============================================
+" I don't like leaving backup files scattered everywhere - store them in a
+" central location
+set directory=$VIM_BACKUP_DIR
+
+" Yeah those error bells are annoying
+set noerrorbells
+
+" For consistency sake
+set fileformat=unix
+
+" Background and colors
+set background=light
+colorscheme solarized
+
 " Indentation
-" =============================================
 set shiftwidth=2 " Number of spaces to use for each step of (auto)indent.  Used for << and >>
 set tabstop=2 " How many spaces a tab counts for
 set autoindent " New lines take indent of above line
 set smartindent " Smart c-like indents
-"set cindent " Default to C like indentation
-set smarttab " Backspace deletes whole tabs at start of line
+set smarttab " Backspace deletes whole tab (shirftwidth worth of spaces) at start of line
 set expandtab " Always expand tabs to spaces
 
-" =============================================
-" Behavior of tab when opening new files,
-" show the longest common string of letters
-" and list all possibilities.
-" =============================================
+" Behavior of tab when opening new files, show the longest common string of
+" letters and list all possibilities.
 set wildmode=longest,list
 
-" =============================================
 " Linebreaks and scrolling
-" =============================================
 set scrolloff=10 " Force n lines of context when scrolling
 set linebreak " Break wrapping lines at word boundaries
 set textwidth=80 " Set 80 cols for all text
 set formatoptions=cq " No hard wraps on text
 set nowrap " no line wrapping
 
-" =============================================
 " Search Configuration
-" =============================================
 set hlsearch " Highlight search
 set incsearch " Search as you type
 set ignorecase " Ignore cases for all-lower search
 set smartcase " Case-sensitive if search is mixed case
 
+" Cross hairs
 set cursorcolumn " Turn on highlighting for cursor column
 set cursorline " Turn on highlighting for cursor row
 
-
+" Mostly I just don't like the viewport height changing
 set showtabline=2 " Always show tabs regardless of num of buffers
 
 set showcmd " Show partial commands in status line
 set number " Show line numbers
 set numberwidth=1 " Number of columns for line numbers
 
-
 set ruler " Show bottom ruler
 set showmatch "Show opening { or ( when typing in closing
 
-set backspace=2 "Allow backspacing over previously entered chars
-
-" =============================================
-" Some useful remappings
-" =============================================
+"Allow backspacing over previously entered chars
+set backspace=2
 
 " Escapes to command mode
-imap jj <Esc>
+inoremap jj <Esc>
 
 " Copy and Paste from 'global' clipboard
-map <leader>y "+y
-map <leader>p "+gp
-map <leader>P "+gP
+noremap <leader>y "+y
+noremap <leader>p "+gp
+noremap <leader>P "+gP
 
-" <Ctrl + a> to select all
-map <C-a> ggVG
+" Easy select all
+noremap <leader>a ggVG
 
 " lazy colon
-map ; :
+noremap ; :
 
 " <CR> clears the search highlighting
 nnoremap <CR> :noh<CR><Esc>
@@ -133,67 +110,33 @@ nnoremap <CR> :noh<CR><Esc>
 " Show current file path
 nnoremap ,F :echo expand("%:p")<CR>
 
-" I often find I want to remove text without clobbering the default register. In
-" visual mode this allows <ctrl+r> to get rid of text without messing with any
-" used register (sends text to the black hole register). I'm also too lazy to
-" bother messing with non-default registers most of the time.
-vmap <C-d> "_d
-vmap <C-r> <C-d>P
-
-" =============================================
-" Buffer Navigation
-" =============================================
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprevious<CR>
-
-" =============================================
-" Plugin Mappings
-" =============================================
 " Expand sequence for Zen Coding
-imap <C-e> <C-y>,
+inoremap <C-e> <C-y>,
 
 " Folding
-"set foldmethod=indent
-"set foldnestmax=5
-"set nofoldenable
-"set foldlevel=1
 set foldmethod=marker
 
-" =============================================
 " I find myself often going into insert mode only to insert a space char - this
 " maps \ to do just that. Similarly, insert a new line above the current one
 " with Control+\ - note this has a side effect of overwritting and deleting
 " whatever mark was set to the z char
-" =============================================
 nnoremap \ i<Space><Esc>l
 nnoremap <C-\> mzO<Esc>0D`z:delm<Space>z<CR>
 
-" =============================================
 " Control + enter essentially regular enter but leaves the end of the current
 " line intact
-" =============================================
-imap <C-CR> <Esc>o
+inoremap <C-CR> <Esc>o
 
 " Let Control+Backspace delete entire words
-imap <C-BS> <Esc>vb"_da
-
-" Some sugar - opening a brace then hitting enter will automatically
-" close the brace on a line below and put the cursor between them
-"inoremap {<cr> {<cr>}<c-o>O
-"inoremap [<cr> [<cr>]<c-o>O
-"inoremap (<cr> (<cr>)<c-o>O
+inoremap <C-BS> <Esc>vb"_da
 
 " Hippie Completion - I prefer control+spacebar
 " Terminal vim interprets <C-Space> as <C-@> so the second line is a workaround
-imap <C-Space> <C-n>
-imap <C-@> <C-Space>
+inoremap <C-Space> <C-n>
+inoremap <C-@> <C-Space>
 
 " Completion options
 set completeopt=longest,menuone,preview
-
-" =============================================
-" Extra extension associations
-" =============================================
 
 " Deck List Object Notation
 au BufRead,BufNewFile *.dlon set syntax=javascript
@@ -204,10 +147,8 @@ au BufRead,BufNewFile *.a4l set syntax=a4l
 au BufRead,BufNewFile *.a4d set syntax=a4d
 au BufRead,BufNewFile *.a4p set syntax=a4d
 
-" Show an error for lines over 80 chars long
-" Keeping lines short helps improve readability
-" and lets us open files side by side withouth
-" cutting off any text
+" Show an error for lines over 80 chars long Keeping lines short helps improve
+" readability and lets us open files side by side withouth cutting off any text
 au! BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " Window Movement
