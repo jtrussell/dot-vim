@@ -116,13 +116,6 @@ inoremap <C-e> <C-y>,
 " Folding
 set foldmethod=marker
 
-" I find myself often going into insert mode only to insert a space char - this
-" maps \ to do just that. Similarly, insert a new line above the current one
-" with Control+\ - note this has a side effect of overwritting and deleting
-" whatever mark was set to the z char
-nnoremap \ i<Space><Esc>l
-nnoremap <C-\> mzO<Esc>0D`z:delm<Space>z<CR>
-
 " Control + enter essentially regular enter but leaves the end of the current
 " line intact
 inoremap <C-CR> <Esc>o
