@@ -131,18 +131,25 @@ inoremap <C-@> <C-Space>
 " Completion options
 set completeopt=longest,menuone,preview
 
-" Deck List Object Notation
-au BufRead,BufNewFile *.dlon set syntax=javascript
-au BufRead,BufNewFile *.dlon set filetype=dlon
+augroup custom_filetypes
+  autocmd!
 
-" Associate active 4d file extensions with the "a4d" filetype
-au BufRead,BufNewFile *.a4l set syntax=a4l
-au BufRead,BufNewFile *.a4d set syntax=a4d
-au BufRead,BufNewFile *.a4p set syntax=a4d
+  " Deck List Object Notation
+  au BufRead,BufNewFile *.dlon set syntax=javascript
+  au BufRead,BufNewFile *.dlon set filetype=dlon
+  
+  " Associate active 4d file extensions with the "a4d" filetype
+  au BufRead,BufNewFile *.a4l set syntax=a4l
+  au BufRead,BufNewFile *.a4d set syntax=a4d
+  au BufRead,BufNewFile *.a4p set syntax=a4d
+augroup END
 
 " Show an error for lines over 80 chars long Keeping lines short helps improve
 " readability and lets us open files side by side withouth cutting off any text
-au! BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+augroup long_line_error
+  autocmd!
+  au! BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+augroup END
 
 " Window Movement
 nnoremap <C-h> <C-w>h
@@ -163,7 +170,11 @@ vnoremap <C-c> <Esc>
 nnoremap <C-c> <Esc>
 
 " Changes to .vimrc go into effect immediately
-au! BufWritePost .vimrc source %
+augroup live_vimrc_updates
+  autocmd!
+  au! BufWritePost .vimrc source %
+augroup END
+
 
 fun! g:MarkdownServer()
  :!start cmd %:p:h /c gfms -p 1234 
