@@ -128,7 +128,7 @@ nnoremap <C-p> :prev<CR>
 " =============================================
 "
 " Expand sequence for Zen Coding
-inoremap <C-e> <C-y>,
+imap <c-e> <c-y>,
 
 " Folding
 set foldmethod=marker
