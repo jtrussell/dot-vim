@@ -99,7 +99,7 @@ noremap <leader>p "+gp
 noremap <leader>P "+gP
 
 " Easy select all
-noremap <leader>a ggVG
+nnoremap <leader>a ggVG
 
 " lazy colon
 noremap ; :
@@ -110,6 +110,23 @@ nnoremap <CR> :noh<CR><Esc>
 " Show current file path
 nnoremap ,F :echo expand("%:p")<CR>
 
+" I often find I want to remove text without clobbering the default register. In
+" visual mode this allows <ctrl+r> to get rid of text without messing with any
+" used register (sends text to the black hole register). I'm also too lazy to
+" bother messing with non-default registers most of the time.
+"vnoremap <C-d> "_d
+"vnoremap <C-r> "_dP
+
+" =============================================
+" Arg List Navigation
+" =============================================
+nnoremap <C-n> :next<CR>
+nnoremap <C-p> :prev<CR>
+
+" =============================================
+" Plugin Mappings
+" =============================================
+"
 " Expand sequence for Zen Coding
 inoremap <C-e> <C-y>,
 
@@ -130,6 +147,8 @@ inoremap <C-@> <C-Space>
 
 " Completion options
 set completeopt=longest,menuone,preview
+
+set diffexpr=
 
 augroup custom_filetypes
   autocmd!
@@ -156,13 +175,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 nnoremap <C-l> <C-w>l
-nnoremap <C-t> <C-w>t
-nnoremap <C-T> <C-w>t<C-w>31\|^<C-w>=
+nnoremap <C-t> <C-w>t<C-w>31\|^<C-w>=
 
 inoremap <C-h> <Esc><C-w>h
 inoremap <C-k> <Esc><C-w>k
 inoremap <C-j> <Esc><C-w>j
 inoremap <C-l> <Esc><C-w>l
+
+" Quickly jump to this file for edits
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Make Ctrl+c actually work like Esc
 inoremap <C-c> <Esc>
@@ -180,6 +201,16 @@ fun! g:MarkdownServer()
  :!start cmd %:p:h /c gfms -p 1234 
  :!start cmd /c open "http://localhost:1234/%:p:t"
 endfun
+
+fun! g:FormatJson()
+  %s:{\(\S\):{\r\1:ge
+  %s:\[\(\S\):[\r\1:ge
+  %s:,\(\S\):,\r\1:ge
+  %s:\S\@<=[\]}]:\r&:ge
+  normal gg=G
+  noh
+endfun
+command! FormatJson :call g:FormatJson()
 
 " Custom Commands
 command! Trim :%s/\s\+$//g
