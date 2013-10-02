@@ -127,7 +127,7 @@ nnoremap <C-p> :prev<CR>
 " Plugin Mappings
 " =============================================
 "
-" Expand sequence for Zen Coding
+" Expand sequence for Emmet Coding
 imap <c-e> <c-y>,
 
 " Folding
