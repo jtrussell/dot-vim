@@ -10,13 +10,7 @@ set guioptions-=T
 " Use a nicer font
 set guifont=dejavu\ sans\ mono
 
-" Rather than add the ctags folder to my path (used by tagbar) just let vim know
-" where to find the files it needs
-let g:tagbar_ctags_bin = "C:/Users/Justin/vimfiles/extra/tags/ctags58/ctags.exe"
-let g:tagbar_phpctags_bin = "C:/Users/Justin/vimfiles/extra/tags/tagbar-phpctags/plugin/tagbar-phpctags.vim"
-let g:tagbar_type_javascript = {"ctagsbin": "C:/Users/Justin/vimfiles/extra/tags/jsctags.cmd"}
-
 " Who wants to start in system32?
-if getcwd() == "C:\\Windows\\system32"
+if getcwd() == "C:\\Program Files (x86)\\Vim\\vim74"
 	:cd $HOME
 endif
