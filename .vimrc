@@ -170,6 +170,10 @@ augroup long_line_error
   au! BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 augroup END
 
+" I find myself often wanting to push lines down or chars right
+nnoremap \ i <esc>l
+nnoremap <C-\> mzO<esc>`z:delm z<cr>
+
 " Window Movement
 nnoremap <C-h> <C-w>h
 nnoremap <C-k> <C-w>k
