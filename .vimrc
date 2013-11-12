@@ -130,6 +130,14 @@ nnoremap <C-p> :prev<CR>
 " Expand sequence for Emmett Coding
 imap <c-e> <c-y>,
 
+" NERDTree Goodness
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+nnoremap <leader>t :CtrlP<CR>
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules|components|bower_components)$'
+
 " Folding
 set foldmethod=marker
 
