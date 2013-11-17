@@ -1,0 +1,15 @@
+altercation/vim-colors-solarized
+digitaltoad/vim-jade
+editorconfig/editorconfig-vim
+garbas/vim-snipmate
+groenewege/vim-less
+jtrussell/snipmate-snippets
+kchmck/vim-coffee-script
+kien/ctrlp.vim
+MarcWeber/vim-addon-mw-utils
+mattn/emmet-vim
+pangloss/vim-javascript
+rmanalan/jshint.vim
+scrooloose/nerdtree
+scrooloose/syntastic
+tomtom/tlib_vim
