@@ -93,7 +93,7 @@ augroup custom_filetypes
   " Deck List Object Notation
   au BufRead,BufNewFile *.dlon set syntax=javascript
   au BufRead,BufNewFile *.dlon set filetype=dlon
-  
+
   " Associate active 4d file extensions with the "a4d" filetype
   au BufRead,BufNewFile *.a4l set syntax=a4l
   au BufRead,BufNewFile *.a4d set syntax=a4d
@@ -114,7 +114,7 @@ augroup live_vimrc_updates
 augroup END
 
 fun! g:MarkdownServer()
- :!start cmd %:p:h /c gfms -p 1234 
+ :!start cmd %:p:h /c gfms -p 1234
  :!start cmd /c open "http://localhost:1234/%:p:t"
 endfun
 
@@ -137,7 +137,7 @@ command! -nargs=* Npm :!npm <f-args>
 
 if has("win32")
   source("vimrc.win")
-enfif
+endif
 
 if has("unix")
   source("vimrc.nix")
