@@ -85,7 +85,7 @@ nnoremap <leader>f :NERDTreeFind<CR>
 " CtrlP Stuff
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>t :CtrlP<CR>
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules|components|bower_components)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|components|bower_components)$'
 
 augroup custom_filetypes
   autocmd!
