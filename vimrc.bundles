@@ -13,3 +13,4 @@ rmanalan/jshint.vim
 scrooloose/nerdtree
 scrooloose/syntastic
 tomtom/tlib_vim
+tpope/vim-pathogen
