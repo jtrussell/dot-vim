@@ -1,4 +1,4 @@
-# OS generated files #
+# OS generated files
 ######################
 .DS_Store
 .DS_Store?
@@ -8,4 +8,25 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+.netrwhist
+
 swap
+
+# Plugins
+######################
+bundle/ctrlp.vim
+bundle/editorconfig-vim
+bundle/emmet-vim
+bundle/jshint.vim
+bundle/nerdtree
+bundle/shifty
+bundle/snipmate-snippets
+bundle/syntastic
+bundle/tlib_vim
+bundle/vim-addon-mw-utils
+bundle/vim-coffee-script
+bundle/vim-colors-solarized
+bundle/vim-jade
+bundle/vim-javascript
+bundle/vim-less
+bundle/vim-snipmate
