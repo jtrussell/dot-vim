@@ -10,9 +10,6 @@ let g:user_email = "jus.russell@gmail.com"
 let g:user_name = "Justin Russell"
 let g:snips_author = g:user_name
 
-set background=light
-colorscheme solarized
-
 set foldmethod=marker
 set directory=$VIM_BACKUP_DIR
 set fileformat=unix
@@ -136,13 +133,13 @@ command! -nargs=* Node :!node <f-args>
 command! -nargs=* Npm :!npm <f-args>
 
 if has("win32")
-  source("vimrc.win")
+  runtime vimrc.win
 endif
 
 if has("unix")
-  source("vimrc.nix")
+  runtime vimrc.nix
 endif
 
 if has("gui_running")
-  source("vimrc.gui")
+  runtime vimrc.gui
 endif
