@@ -65,7 +65,7 @@ inoremap <C-BS> <Esc>vb"_da
 " Use <C-Space> for hippie completion
 " Note: Terminal vim interprets <C-Space> as <C-@>
 inoremap <C-Space> <C-n>
-inoremap <C-@> <C-Space>
+imap <C-@> <C-Space>
 
 " Make Ctrl+c actually work like Esc
 inoremap <C-c> <Esc>
