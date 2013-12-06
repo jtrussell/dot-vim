@@ -30,3 +30,4 @@ bundle/vim-jade
 bundle/vim-javascript
 bundle/vim-less
 bundle/vim-snipmate
+bundle/vim-pathogen
