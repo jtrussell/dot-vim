@@ -95,6 +95,9 @@ augroup custom_filetypes
   au BufRead,BufNewFile *.a4l set syntax=a4l
   au BufRead,BufNewFile *.a4d set syntax=a4d
   au BufRead,BufNewFile *.a4p set syntax=a4d
+  
+  " Handlebars
+  au BufRead,BufNewFile *.hbs set syntax=html
 augroup END
 
 " Show an error for lines over 80 chars long Keeping lines short helps improve
