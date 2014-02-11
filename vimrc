@@ -113,27 +113,22 @@ augroup live_vimrc_updates
   au! BufWritePost .vimrc source %
 augroup END
 
-fun! g:MarkdownServer()
- :!start cmd %:p:h /c gfms -p 1234
- :!start cmd /c open "http://localhost:1234/%:p:t"
-endfun
-
 fun! g:FormatJson()
-  %s:{\(\S\):{\r\1:ge
-  %s:\[\(\S\):[\r\1:ge
-  %s:,\(\S\):,\r\1:ge
-  %s:\S\@<=[\]}]:\r&:ge
-  normal gg=G
-  noh
+  if has("python")
+    %!python -m json.tool
+  else
+    %s:{\(\S\):{\r\1:ge
+    %s:\[\(\S\):[\r\1:ge
+    %s:,\(\S\):,\r\1:ge
+    %s:\S\@<=[\]}]:\r&:ge
+    normal gg=G
+    noh
+  endif
 endfun
 command! FormatJson :call g:FormatJson()
 
 " Custom Commands
 command! Trim :%s/\s\+$//g
-command! -nargs=* Grunt :!grunt.cmd <f-args>
-command! Markdown :call g:MarkdownServer()
-command! -nargs=* Node :!node <f-args>
-command! -nargs=* Npm :!npm <f-args>
 
 if has("win32")
   runtime vimrc.win
