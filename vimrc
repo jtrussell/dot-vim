@@ -87,10 +87,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|components|bower_
 augroup custom_filetypes
   autocmd!
 
-  " Deck List Object Notation
-  au BufRead,BufNewFile *.dlon set syntax=javascript
-  au BufRead,BufNewFile *.dlon set filetype=dlon
-
   " Associate active 4d file extensions with the "a4d" filetype
   au BufRead,BufNewFile *.a4l set syntax=a4l
   au BufRead,BufNewFile *.a4d set syntax=a4d
