@@ -48,6 +48,7 @@ set diffexpr=
 
 nnoremap ; :
 nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 nnoremap <leader>p "+gp
 nnoremap <leader>P "+gP
 nnoremap <leader>a ggVG
