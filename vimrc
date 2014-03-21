@@ -10,8 +10,13 @@ let g:user_email = "jus.russell@gmail.com"
 let g:user_name = "Justin Russell"
 let g:snips_author = g:user_name
 
+if isdirectory($VIM_BACKUP_DIR)
+  set directory=$VIM_BACKUP_DIR
+else
+  echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists"
+endif
+
 set foldmethod=marker
-set directory=$VIM_BACKUP_DIR
 set fileformat=unix
 set shiftwidth=2
 set tabstop=2
