@@ -51,6 +51,8 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+gp
 nnoremap <leader>P "+gP
+vnoremap <leader>p "+gp
+vnoremap <leader>P "+gP
 nnoremap <leader>a ggVG
 nnoremap <CR> :noh<CR><Esc>
 nnoremap ,F :echo expand("%:p")<CR>
