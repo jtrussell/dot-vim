@@ -47,6 +47,7 @@ set completeopt=longest,menuone,preview
 set diffexpr=
 
 nnoremap ; :
+vnoremap ; :
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+gp
