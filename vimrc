@@ -12,6 +12,7 @@ let g:snips_author = g:user_name
 
 if isdirectory($VIM_BACKUP_DIR)
   set directory=$VIM_BACKUP_DIR
+  set backupdir=$VIM_BACKUP_DIR
 else
   echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists"
 endif
