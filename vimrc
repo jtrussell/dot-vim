@@ -89,6 +89,9 @@ imap <c-e> <c-y>,
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
+" Snipmate Stuff
+silent! snoremap <unique> <BS> b<BS>
+
 " CtrlP Stuff
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>t :CtrlP<CR>
