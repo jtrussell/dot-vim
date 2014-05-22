@@ -2,4 +2,5 @@ set guioptions-=m
 set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
+set background=light
 colorscheme solarized
