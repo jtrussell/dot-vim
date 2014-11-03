@@ -107,6 +107,9 @@ augroup custom_filetypes
 
   " Handlebars
   au BufRead,BufNewFile *.hbs set syntax=html
+  
+  " Markdown
+  au BufRead,BufNewFile *.md set syntax=markdown
 augroup END
 
 " Show an error for lines over 80 chars long Keeping lines short helps improve
