@@ -5,7 +5,6 @@ editorconfig/editorconfig-vim
 garbas/vim-snipmate
 groenewege/vim-less
 jtrussell/snipmate-snippets
-kchmck/vim-coffee-script
 kien/ctrlp.vim
 mattn/emmet-vim
 pangloss/vim-javascript
