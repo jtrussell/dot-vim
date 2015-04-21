@@ -2,5 +2,7 @@ set guioptions-=m
 set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme darkside
+hi CursorLine guibg=#111111
+hi CursorColumn guibg=#111111

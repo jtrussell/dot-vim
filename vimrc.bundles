@@ -4,6 +4,7 @@ digitaltoad/vim-jade
 editorconfig/editorconfig-vim
 garbas/vim-snipmate
 groenewege/vim-less
+jtrussell/colour-schemes
 jtrussell/snipmate-snippets
 kien/ctrlp.vim
 mattn/emmet-vim

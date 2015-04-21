@@ -8,16 +8,15 @@ call pathogen#infect()
 let mapleader=","
 let g:user_email = "jus.russell@gmail.com"
 let g:user_name = "Justin Russell"
-let g:snips_author = g:user_name
 
 if isdirectory($VIM_BACKUP_DIR)
   set directory=$VIM_BACKUP_DIR
   set backupdir=$VIM_BACKUP_DIR
 else
-  echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists"
+  echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists (for vim backups)"
 endif
 
-set foldmethod=marker
+set foldmethod=manual
 set fileformat=unix
 set shiftwidth=2
 set tabstop=2
@@ -47,6 +46,8 @@ set backspace=2
 set completeopt=longest,menuone,preview
 set diffexpr=
 
+map <F11> <C-w>_<C-w><Bar>
+
 nnoremap ; :
 vnoremap ; :
 nnoremap <leader>y "+y
@@ -67,6 +68,8 @@ nnoremap <C-l> <C-w>l
 nnoremap \ i <esc>l
 nnoremap <C-\> mzO<esc>`z:delm z<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+
+nnoremap <expr> <leader>v '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 inoremap jj <Esc>
 inoremap <C-CR> <Esc>o
@@ -90,9 +93,11 @@ nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
 " Snipmate Stuff
+let g:snips_author = g:user_name
 silent! snoremap <unique> <BS> b<BS>
 
 " CtrlP Stuff
+let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components)$'
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|components|bower_components)$'
@@ -107,7 +112,7 @@ augroup custom_filetypes
 
   " Handlebars
   au BufRead,BufNewFile *.hbs set syntax=html
-  
+
   " Markdown
   au BufRead,BufNewFile *.md set syntax=markdown
 augroup END
