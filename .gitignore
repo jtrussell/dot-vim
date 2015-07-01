@@ -33,3 +33,4 @@ bundle/vim-javascript
 bundle/vim-less
 bundle/vim-pathogen
 bundle/vim-snipmate
+bundle/vim-mustache-handlebars

@@ -8,6 +8,7 @@ jtrussell/colour-schemes
 jtrussell/snipmate-snippets
 kien/ctrlp.vim
 mattn/emmet-vim
+mustache/vim-mustache-handlebars
 pangloss/vim-javascript
 scrooloose/nerdtree
 scrooloose/syntastic
