@@ -3,6 +3,6 @@ set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
 set background=dark
-colorscheme darkside
+colorscheme peacock
 hi CursorLine guibg=#111111
 hi CursorColumn guibg=#111111
