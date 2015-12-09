@@ -97,10 +97,9 @@ let g:snips_author = g:user_name
 silent! snoremap <unique> <BS> b<BS>
 
 " CtrlP Stuff
-let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components)$'
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|components|bower_components)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|components|bower_components|vendor)$'
 
 augroup custom_filetypes
   autocmd!
