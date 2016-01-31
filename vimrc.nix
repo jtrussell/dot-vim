@@ -1,2 +1,2 @@
 set background=dark
-colorscheme slate
+colorscheme desert
