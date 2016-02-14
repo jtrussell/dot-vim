@@ -148,6 +148,8 @@ command! FormatJson :call g:FormatJson()
 " Custom Commands
 command! Trim :%s/\s\+$//g
 
+iab lenght length
+
 if has("win32")
   runtime vimrc.win
 endif
