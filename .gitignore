@@ -30,6 +30,7 @@ bundle/vim-coffee-script
 bundle/vim-colors-solarized
 bundle/vim-jade
 bundle/vim-javascript
+bundle/vim-jsx
 bundle/vim-less
 bundle/vim-pathogen
 bundle/vim-snipmate
