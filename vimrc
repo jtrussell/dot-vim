@@ -131,6 +131,12 @@ augroup live_vimrc_updates
   au! BufWritePost .vimrc source %
 augroup END
 
+augroup no_indent_plain_text
+  autocmd!
+  au! BufRead,BufNewFile *.txt setlocal nosmartindent
+  au! BufRead,BufNewFile *.md setlocal nosmartindent
+augroup END
+
 fun! g:FormatJson()
   if has("python")
     %!python -m json.tool
