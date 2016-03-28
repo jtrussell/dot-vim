@@ -21,7 +21,6 @@ bundle/editorconfig-vim
 bundle/emmet-vim
 bundle/jshint.vim
 bundle/nerdtree
-bundle/shifty
 bundle/snipmate-snippets
 bundle/syntastic
 bundle/tlib_vim
