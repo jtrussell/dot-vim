@@ -13,7 +13,7 @@ if isdirectory($VIM_BACKUP_DIR)
   set directory=$VIM_BACKUP_DIR
   set backupdir=$VIM_BACKUP_DIR
 else
-  echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists (for vim backups)"
+  echom "Please create an environment variable VIM_BACKUP_DIR and make sure that directory exists"
 endif
 
 set foldmethod=manual
