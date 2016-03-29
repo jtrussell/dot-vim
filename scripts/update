@@ -1,4 +1,10 @@
 #!/bin/sh
 
-echo 'todo'
-
+while read -r line
+do
+  bundle=$(echo $line| cut -d '/' -f 2)
+  printf "Updating $bundle... "
+  pushd bundle/$bundle &> /dev/null
+  git pull
+  popd &> /dev/null
+done < vimrc.bundles
