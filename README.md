@@ -1,17 +1,9 @@
-Dot Vim
-=======
+# Vimfiles
 
-My personal vim config stuff.
+> My vim config stuff
 
-A small ShellJS script installs our plugins: `shjs install-bundles.sh.js`.
+1. Clone into `~/.vim` or `%userprofile%/vimfiles`
+2. Use `scripts/install` after initial clone (downloads plugins, makes sym
+   links, etc.)
+3. Use `scripts/update` to pull plugin updates
 
-You'll need:
-- [Node.js](http://nodejs.org/)
-- [Shelljs](https://github.com/arturadib/shelljs) `npm install -g shelljs`
-
-*OR*
-
-If you're not into the whole JavaScript thing you can just `git clone` everything
-in `vimrc.bundles` into `bundle`.
-
-Then just symlink `~/.vimrc` to `vimrc`.
