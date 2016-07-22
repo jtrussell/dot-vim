@@ -2,7 +2,6 @@ set guioptions-=m
 set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
-set background=dark
-colorscheme peacock
+colorscheme molokai
 hi CursorLine guibg=#111111
 hi CursorColumn guibg=#111111

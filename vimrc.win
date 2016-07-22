@@ -1,5 +1,3 @@
 if getcwd() == "C:\\Program Files (x86)\\Vim\\vim74"
 	:cd $HOME
 endif
-
-set background=dark
