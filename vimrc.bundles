@@ -5,6 +5,7 @@ editorconfig/editorconfig-vim
 garbas/vim-snipmate
 groenewege/vim-less
 jtrussell/colour-schemes
+jtrussell/molokai
 jtrussell/snipmate-snippets
 kien/ctrlp.vim
 mattn/emmet-vim

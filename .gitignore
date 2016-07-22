@@ -22,6 +22,7 @@ bundle/ctrlp.vim
 bundle/editorconfig-vim
 bundle/emmet-vim
 bundle/jshint.vim
+bundle/molokai
 bundle/nerdtree
 bundle/shifty
 bundle/snipmate-snippets
@@ -34,6 +35,6 @@ bundle/vim-jade
 bundle/vim-javascript
 bundle/vim-jsx
 bundle/vim-less
+bundle/vim-mustache-handlebars
 bundle/vim-pathogen
 bundle/vim-snipmate
-bundle/vim-mustache-handlebars
