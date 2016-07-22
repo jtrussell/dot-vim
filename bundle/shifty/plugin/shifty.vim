@@ -50,4 +50,3 @@ inoremap <silent> <A-j> <C-o>:call MoveLineDown()<CR>
 "vnoremap <silent> <A-j> :<C-u>call MoveVisualDown()<CR>
 xnoremap <silent> <A-j> :<C-u>call MoveVisualDown()<CR>
 xnoremap <silent> <A-k> :<C-u>call MoveVisualUp()<CR>
-
