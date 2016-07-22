@@ -107,7 +107,7 @@ augroup custom_filetypes
   autocmd!
 
   " Associate active 4d file extensions with the "a4d" filetype
-  au BufRead,BufNewFile *.a4l set syntax=a4l
+  au BufRead,BufNewFile *.a4l set syntax=a4d
   au BufRead,BufNewFile *.a4d set syntax=a4d
   au BufRead,BufNewFile *.a4p set syntax=a4d
 
