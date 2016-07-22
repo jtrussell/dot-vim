@@ -13,6 +13,8 @@ Thumbs.db
 swap
 bundle-bench
 
+init.vim
+
 # Plugins
 ######################
 bundle/colour-schemes
