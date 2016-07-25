@@ -64,6 +64,11 @@ nnoremap ,F :echo expand("%:p")<CR>
 nnoremap <C-n> :next<CR>
 nnoremap <C-p> :prev<CR>
 nnoremap <C-h> <C-w>h
+if has('nvim')
+  " See: https://github.com/neovim/neovim/issues/2048
+  nmap <BS> <C-W>h
+else
+endif
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 nnoremap <C-l> <C-w>l
