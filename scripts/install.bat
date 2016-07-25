@@ -80,5 +80,6 @@ if exist %userprofile%\.vimrc (
 )
 
 mklink %userprofile%\.vimrc %dir_root%\vimrc
+mklink %dir_root%\init.vim %dir_root%\vimrc
 endlocal
 goto :eof
