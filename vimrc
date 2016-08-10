@@ -103,6 +103,10 @@ nnoremap <leader>f :NERDTreeFind<CR>
 let g:snips_author = g:user_name
 silent! snoremap <unique> <BS> b<BS>
 
+" jsx (React) stuff
+" - Get jsx support in plain js files (i.e. no jsx extension)
+let g:jsx_ext_required = 0
+
 " CtrlP Stuff
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
