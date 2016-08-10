@@ -2,6 +2,8 @@ set guioptions-=m
 set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
-colorscheme molokai
+let g:solarized_italic=0
+colorscheme solarized
+
 hi CursorLine guibg=#111111
 hi CursorColumn guibg=#111111
