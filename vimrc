@@ -46,7 +46,6 @@ set backspace=2
 set completeopt=longest,menuone,preview
 set diffexpr=
 set noerrorbells
-set hidden
 
 map <F11> <C-w>_<C-w><Bar>
 
