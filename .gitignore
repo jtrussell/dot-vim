@@ -36,4 +36,5 @@ bundle/vim-jsx
 bundle/vim-less
 bundle/vim-mustache-handlebars
 bundle/vim-pathogen
+bundle/vim-puppet
 bundle/vim-snipmate

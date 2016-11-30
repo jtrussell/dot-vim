@@ -12,6 +12,7 @@ mattn/emmet-vim
 mustache/vim-mustache-handlebars
 mxw/vim-jsx
 pangloss/vim-javascript
+rodjek/vim-puppet
 scrooloose/nerdtree
 scrooloose/syntastic
 tomtom/tlib_vim
