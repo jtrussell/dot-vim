@@ -93,6 +93,7 @@ nnoremap <C-c> <Esc>
 
 " Emmet Coding Stuff
 imap <c-e> <c-y>,
+vmap <c-e> <c-y>,
 
 " NERDTree Stuff
 nnoremap <leader>d :NERDTreeToggle<CR>
