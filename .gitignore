@@ -28,6 +28,7 @@ bundle/snipmate-snippets
 bundle/syntastic
 bundle/tlib_vim
 bundle/vim-addon-mw-utils
+bundle/vim-airline
 bundle/vim-coffee-script
 bundle/vim-colors-solarized
 bundle/vim-jade
