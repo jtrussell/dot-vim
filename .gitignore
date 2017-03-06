@@ -21,6 +21,7 @@ bundle/colour-schemes
 bundle/ctrlp.vim
 bundle/editorconfig-vim
 bundle/emmet-vim
+bundle/gruvbox
 bundle/molokai
 bundle/nerdtree
 bundle/snipmate-snippets

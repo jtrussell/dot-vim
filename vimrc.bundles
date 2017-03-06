@@ -9,6 +9,7 @@ jtrussell/molokai
 jtrussell/snipmate-snippets
 kien/ctrlp.vim
 mattn/emmet-vim
+morhetz/gruvbox
 mustache/vim-mustache-handlebars
 mxw/vim-jsx
 pangloss/vim-javascript

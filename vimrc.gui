@@ -3,7 +3,7 @@ set guioptions-=T
 set guifont=dejavu\ sans\ mono
 
 let g:solarized_italic=0
-colorscheme solarized
+colorscheme gruvbox
 
 hi CursorLine guibg=#111111
 hi CursorColumn guibg=#111111
