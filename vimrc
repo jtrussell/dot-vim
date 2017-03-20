@@ -112,6 +112,10 @@ nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components|vendor)$'
 
+" Use eslint_d for faster js linting
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
 augroup custom_filetypes
   autocmd!
 
