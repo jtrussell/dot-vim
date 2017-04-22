@@ -1,5 +1,6 @@
 set guioptions-=m
 set guioptions-=T
+set guioptions-=L " Scroll bars cause window to unsnap
 set guifont=dejavu\ sans\ mono
 
 let g:solarized_italic=0
