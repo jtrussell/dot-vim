@@ -1,6 +1,4 @@
-MarcWeber/vim-addon-mw-utils
 altercation/vim-colors-solarized
-digitaltoad/vim-jade
 editorconfig/editorconfig-vim
 garbas/vim-snipmate
 groenewege/vim-less
@@ -8,11 +6,13 @@ jtrussell/colour-schemes
 jtrussell/molokai
 jtrussell/snipmate-snippets
 kien/ctrlp.vim
+marcweber/vim-addon-mw-utils
 mattn/emmet-vim
 morhetz/gruvbox
 mustache/vim-mustache-handlebars
 mxw/vim-jsx
 pangloss/vim-javascript
+pprovost/vim-ps1
 rodjek/vim-puppet
 scrooloose/nerdtree
 scrooloose/syntastic
