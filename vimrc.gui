@@ -1,7 +1,7 @@
 set guioptions-=m
 set guioptions-=T
 set guioptions-=L " Scroll bars cause window to unsnap
-set guifont=dejavu\ sans\ mono
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 
 let g:solarized_italic=0
 colorscheme gruvbox
