@@ -1,3 +1,4 @@
+
 if getcwd() == "C:\\Program Files (x86)\\Vim\\vim74"
 	:cd $HOME
 endif
@@ -5,4 +6,8 @@ endif
 if executable("grep")
   " findstr wants to take over for some reason
   set grepprg=grep
+endif
+
+if executable("ack")
+  set grepprg=ack
 endif
