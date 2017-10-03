@@ -8,3 +8,5 @@ colorscheme gruvbox
 
 hi CursorLine guibg=#111111
 hi CursorColumn guibg=#111111
+
+autocmd GUIenter * set vb t_vb=
