@@ -17,5 +17,6 @@ rodjek/vim-puppet
 scrooloose/nerdtree
 scrooloose/syntastic
 tomtom/tlib_vim
+tpope/vim-fugitive
 tpope/vim-pathogen
 vim-airline/vim-airline
