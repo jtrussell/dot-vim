@@ -76,6 +76,9 @@ nnoremap \ i <esc>l
 nnoremap <C-\> mzO<esc>`z:delm z<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
+" To highligted pasted text
+nnoremap gp `[v`]
+
 nnoremap <expr> <leader>v '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 inoremap jj <Esc>
@@ -99,6 +102,7 @@ vmap <c-e> <c-y>,
 " NERDTree Stuff
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
+let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '@plr[[dir]]']
 
 " Snipmate Stuff
 let g:snips_author = g:user_name
@@ -111,7 +115,7 @@ let g:jsx_ext_required = 0
 " CtrlP Stuff
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components|vendor)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components|vendor|dist|build|coverage)$'
 
 " Use eslint_d for faster js linting
 let g:syntastic_javascript_checkers = ['standard']
