@@ -2,11 +2,11 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=L " Scroll bars cause window to unsnap
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+set guifont=Dank\ Mono:h10
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
 
-let g:solarized_italic=0
+let g:solarized_italic=1
 colorscheme gruvbox
 
 hi CursorLine guibg=#111111
