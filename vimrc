@@ -95,6 +95,8 @@ inoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 nnoremap <C-c> <Esc>
 
+let g:deoplete#enable_at_startup = 1
+
 " Emmet Coding Stuff
 imap <c-e> <c-y>,
 vmap <c-e> <c-y>,
@@ -115,7 +117,7 @@ let g:jsx_ext_required = 0
 " CtrlP Stuff
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components|vendor|dist|build|coverage)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.?(git|hg|svn|node_modules|bower_components|vendor|dist|build|coverage|\@plr)$'
 
 " Use eslint_d for faster js linting
 let g:syntastic_javascript_checkers = ['standard']
