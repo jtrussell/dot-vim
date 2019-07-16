@@ -33,3 +33,4 @@ bundle/vim-jsx-improve
 bundle/vim-pathogen
 bundle/vim-ps1
 bundle/vim-snipmate
+bundle/ale
